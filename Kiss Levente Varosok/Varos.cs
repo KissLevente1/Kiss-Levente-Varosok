@@ -17,12 +17,12 @@ namespace Kiss_Levente_Varosok
             var v = s.Split(';');
             VarosNeve = v[0];
             OrszagNeve = v[1];
-            Nepesseg = double.Parse(v[2]);
+            Nepesseg = Math.Round(double.Parse(v[2]),2);
         }
 
         public override string ToString()
         {
-            return $"Város: {VarosNeve}  Ország: {OrszagNeve}  Nepesség: {Math.Round(Nepesseg),2} millió";
+            return $"Város: {VarosNeve}  Ország: {OrszagNeve}  Nepesség: {Nepesseg} millió";
         }
     }
 }
